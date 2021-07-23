@@ -10,19 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
 
     <!-- CSS Page -->
-    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- HTML -->
     <main id="container">
         <aside id="navigation-menu">
-            <h3>Exercícios</h3>
             <nav class="exercicios-nav">
-                <a href wm-link="exercicios/exercicio1.html" wm-destino="#challenges">Exercicio 1</a>
-                <a href wm-link="exercicios/exercicio2.html" wm-destino="#challenges">Exercicio 2</a>
+                <ul>
+                    <li><a href="index.html"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+                    <li onclick="dropDown()"><a href="#"><ion-icon name="school-outline"></ion-icon>Exercícios</a>
+                        <ul class="list-item">
+                            <li><a href ex-link="exercicio1.html" ex-destino="#challenges">Exercicio 1</a></li>
+                            <li><a href ex-link="exercicio2.html" ex-destino="#challenges">Exercicio 2</a></li>
+                            <li><a href ex-link="exercicio3.html" ex-destino="#challenges">Exercicio 3</a></li>
+                            <li><a href ex-link="exercicio4.html" ex-destino="#challenges">Exercicio 4</a></li>
+                            <li><a href ex-link="exercicio5.html" ex-destino="#challenges">Exercicio 5</a></li>
+                        </ul>
+                    </li>
+                </ul>   
             </nav>
         </aside>
     
@@ -32,37 +39,13 @@
     </main>
 
 <!-- JS -->
-<script>
-    function navegarViaAjax(url, seletor, push = true) {
-            if(!url || !seletor) return
-            const elemento = document.querySelector(seletor)
-            fetch(url)
-                .then(resp => resp.text())
-                .then(html => {
-                    elemento.innerHTML = html
-                    if(push) {
-                        history.pushState({ seletor }, null, url)
-                    }
-                })
-        }
+<script type="text/javascript" src="./js/navegation.js"></script>
+<script type="text/javascript" src="./js/exercicios.js"></script>
+<script type="text/javascript" src="./js/funcoesComplementares.js"></script>
 
-        document.querySelectorAll('[wm-link]').forEach(link => {
-            const url = link.attributes['wm-link'].value
-            const seletorDestino = link.attributes['wm-destino'].value
-
-            link.onclick = e => {
-                e.preventDefault()
-                navegarViaAjax(url, seletorDestino)
-            }
-        })
-
-        window.onpopstate = e => {
-            if(e.state) {
-                navegarViaAjax(window.location.href, e.state.seletor, false)
-            }
-        }
-</script>
-<script type="text/javascript" src="./js/funcoes.js"></script>
+<!-- Ion Icon -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

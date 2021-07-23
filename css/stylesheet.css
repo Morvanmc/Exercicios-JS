@@ -1,11 +1,9 @@
 /* Reset */
 * {
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 #container {
     display: flex;
@@ -13,34 +11,61 @@
 }
 
 #navigation-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
     flex: 1 1 20%;
     min-height: 100vh;
-    text-align: center;
     padding: 30px 12px;
+    
     border-right: 2px solid;
-    background: #6C7A89;  
+    background: linear-gradient(to right, #232526, #414345); 
+
+    font-size: 20px;
+    
 }
 
 #exercises {
     flex: 1 1 80%;
     min-height: 100vh;
-    padding: 50px;
+    padding: 50px;    
 }
 
 #challenges {
-    align-items: center;
+    align-content: center;
+}
+
+.exercicios-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.exercicios-nav li {
+    margin: 10px;
+    list-style: none;
+}
+
+.exercicios-nav a:hover,
+.list-item a:hover {
+    background: #414345cc;
+}
+
+.exercicios-nav ion-icon {
+    margin-right: 5px;
+}
+
+.list-item {
+    margin-left: 25px;
 }
 
 .challenge-box {
-    width: 550px;
+    width: 750px;
     height: 350px;
     background: #fff;
     border: 2px solid;
 
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    
 }
 
 .challenge-box h1 {
@@ -52,15 +77,14 @@
 .challenge-box p {
     padding-left: 10px;
 }
+
 .challenge-box input,
 .challenge-box label {
     margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .challenge-box button {
-    margin-left: 100px;
-    margin-right: 100px;
+    align-self: center;
 }
-
