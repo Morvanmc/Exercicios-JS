@@ -1,0 +1,66 @@
+/* Reset */
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#navigation-menu {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 2px solid;
+    background: #6C7A89;  
+}
+
+#exercises {
+    flex: 1 1 80%;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+#challenges {
+    align-items: center;
+}
+
+.challenge-box {
+    width: 550px;
+    height: 350px;
+    background: #fff;
+    border: 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.challenge-box h1 {
+    border-left: 5px solid green;
+    margin-left: 5px;
+    padding-left: 3px;
+}
+
+.challenge-box p {
+    padding-left: 10px;
+}
+.challenge-box input,
+.challenge-box label {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.challenge-box button {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
