@@ -15,6 +15,10 @@ A proposta inicial da lista era resolver cada exercício utilizando apenas JS , 
 * Aparecerá a msg "Executando..." no terminal, o que significa que você pode abrir o projeto
 * Acesse http://localhost:8080
 
+**OBS:** Caso a porta 8080 esteja ocupada você pode:
+* Encerrar o processo que estiver rodando nela
+* Mudar a porta de execução no arquivo __server.js__
+
 ## Tecnologias principais:
 
 * JavaScript
