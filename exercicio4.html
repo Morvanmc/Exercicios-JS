@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 01</title>
+    <title>Exercício 04</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
@@ -14,21 +14,39 @@
 
 </head>
 <body>
-    <!-- HTML -->
-    <div id="challenge-box-4" class="challenge-box">
-        <h1>Desafio 04</h1>
-        <p>Crie uma função que receba:<br>
-        - Um número de 1 a 12;<br>
-        O retono deve ser o <b>mês</b> correspondente ao número."                    
-        </p>
-        <div class="input-group">
-            <label for="mes-c4">Número:</label>
-            <input type="text" id="mes-c4" placeholder="Insira um número...">
+    <section id="box-4">
+        <div id="challenge-box-4" class="challenge-box">
+            <h1>Exercício 04</h1>
+            <p>Crie uma função que receba:<br>
+            - Um número de 1 a 12;<br>
+            O retono deve ser o <b>mês</b> correspondente ao número."                    
+            </p>
+            <div class="input-group">
+                <label for="mes-c4">Número:</label>
+                <input type="text" id="mes-c4" placeholder="Insira um número...">
+            </div>
+            
+            <p id="resultado"></p>
+            <button class="btn" onclick="mesPorNumero()">GO</button>
         </div>
-        
-        <p id="resultado-c4"></p>
-        <button class="btn" onclick="mesPorNumero()">GO</button>
-    </div>
+
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
+                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
+                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    
 
 <!-- JS -->
 <script type="text/javascript" src="./js/funcoes.js"></script>

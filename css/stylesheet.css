@@ -5,6 +5,11 @@
     margin: 0;
 }
 
+.highlights {
+    color: #008000;
+    font-weight: bold;
+}
+
 #container {
     display: flex;
     flex-direction: row;
@@ -41,6 +46,16 @@
     justify-content: center;
 }
 
+#resultado {
+    width: 400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #DCDCDC;
+}
+
 .exercicios-nav a {
     color: #fff;
     text-decoration: none;
@@ -58,6 +73,20 @@
 
 .exercicios-nav ion-icon {
     margin-right: 5px;
+}
+
+.apresentacao {
+    margin-left: 20px;
+}
+
+.apresentacao h2 {
+    border-left: 5px solid #008000;
+    padding-left: 5px;
+    margin-bottom: 25px;
+}
+
+.apresentacao p {
+    width: 80%;
 }
 
 .list-itens {
@@ -82,8 +111,8 @@
 
 .challenge-box h1 {
     border-left: 5px solid #008000;
+    padding-left: 5px;
     font-size: 30px;
-    position: initial;
 }
 
 .challenge-box p {
@@ -125,4 +154,65 @@
   .btn:hover {
     transition: 0.5s;
     background: #d3d3d3;
+  }
+
+  .code-box pre {
+    margin-top: 30px;
+    color: #FFF;
+    width: 750px;
+    height: 450px;
+    background: #4F4F4F;
+    border: 2px solid;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-box {
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-box {
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #B0C4DE;
+  }
+
+  .btn-box ion-icon {
+      font-size: 30px;
+      font-weight: bold;
+  }
+
+  .btn-box:hover {
+      background-color: #B0C4DEcc;
+  }
+
+  /* Style code */
+  :root {
+      --function-color: #DA70D6;
+      --function-name-color: #32CD32;
+      --att-value-color: #FFFF00cc;
+      --var-color: #9932CC;
+  }
+
+  .function {
+      color: var(--function-color);
+  }
+
+  .function-name {
+      color: var(--function-name-color);
+  }
+
+  .att-value {
+      color: var(--att-value-color);
+  }
+
+  .var {
+      color: var(--var-color);
   }

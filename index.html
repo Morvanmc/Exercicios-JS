@@ -9,6 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
 
+     <!-- Dev Icon Fonts -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
+
     <!-- CSS Page -->
     <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 
@@ -22,11 +25,16 @@
                     <li><a href="index.html"><ion-icon name="home-outline"></ion-icon>Home</a></li>
                     <li><a onclick="dropDown()" href="#"><ion-icon name="school-outline"></ion-icon>Exercícios</a>
                         <ul class="list-itens hidden">
-                            <li class="list-item"><a href ex-link="exercicio1.html" ex-destino="#challenges">Exercicio 1</a></li>
-                            <li class="list-item"><a href ex-link="exercicio2.html" ex-destino="#challenges">Exercicio 2</a></li>
-                            <li class="list-item"><a href ex-link="exercicio3.html" ex-destino="#challenges">Exercicio 3</a></li>
-                            <li class="list-item"><a href ex-link="exercicio4.html" ex-destino="#challenges">Exercicio 4</a></li>
-                            <li class="list-item"><a href ex-link="exercicio5.html" ex-destino="#challenges">Exercicio 5</a></li>
+                            <li onclick="hiddenApresentacao()" class="list-item">
+                                <a href ex-link="exercicio1.html" ex-destino="#challenges">Exercicio 1</a></li>
+                            <li onclick="hiddenApresentacao()" class="list-item">
+                                <a href ex-link="exercicio2.html" ex-destino="#challenges">Exercicio 2</a></li>
+                            <li onclick="hiddenApresentacao()" class="list-item">
+                                <a href ex-link="exercicio3.html" ex-destino="#challenges">Exercicio 3</a></li>
+                            <li onclick="hiddenApresentacao()" class="list-item">
+                                <a href ex-link="exercicio4.html" ex-destino="#challenges">Exercicio 4</a></li>
+                            <li onclick="hiddenApresentacao()" class="list-item">
+                                <a href ex-link="exercicio5.html" ex-destino="#challenges">Exercicio 5</a></li>
                         </ul>
                     </li>
                 </ul>   
@@ -34,6 +42,15 @@
         </aside>
     
         <section id="exercises">
+            <div class="apresentacao">
+                <h2>Lista de Exercícios JavaScript <i class="devicon-javascript-plain colored"></i></h2>
+                <p>Projeto baseado na lista de exercícios retirada do curso <span class="highlights">Web Moderno - Udemy</span>, ministrado pelo Prof. Leonardo Leitão.<br>
+                    A proposta inicial da lista era resolver cada exercício utilizando apenas JS <i class="devicon-javascript-plain colored"></i>, mas para fins de prática de outras techs,
+                    foram adionados HTML<i class="devicon-html5-plain colored"></i> e CSS<i class="devicon-css3-plain colored"></i> na resolução, 
+                    além da utilização de AJAX<i class="devicon-ajax-plain colored"></i> para facilitar a navegação.<br><br>
+                </p>
+                <p>Escolha um exercício na categoria ao lado e <strong>BOM ESTUDOS!</strong></p>
+            </div>
             <div id="challenges"></div>
         </section>
     </main>

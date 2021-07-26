@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 01</title>
+    <title>Exercício 05</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
@@ -14,26 +14,44 @@
 
 </head>
 <body>
-    <!-- HTML -->
-    <div id="challenge-box-5" class="challenge-box">
-        <h1>Desafio 05</h1>
-        <p>Crie uma função que receba:<br>
-        - Dois números;<br>
-        O retono deve ser <b>true</b> se o primeiro for <b>>=</b> ao segundo.<br>
-        O retorno deve ser <b>false</b> se caso não satisfaça a primeira condição<br>
-        e caso os valores sejam de tipos diferente.                    
-        </p>
-        <div class="input-group">
-            <label for="PrimeiroNum-c5">Número 1:</label>
-            <input type="text" id="PrimeiroNum-c5" placeholder="Insira um número...">
+    <section id="box-5">
+        <div id="challenge-box-5" class="challenge-box">
+            <h1>Exercício 05</h1>
+            <p>Crie uma função que receba:<br>
+            - Dois números;<br>
+            O retono deve ser <b>true</b> se o primeiro for <b>>=</b> ao segundo.<br>
+            O retorno deve ser <b>false</b> se caso não satisfaça a primeira condição<br>
+            e caso os valores sejam de tipos diferente.                    
+            </p>
+            <div class="input-group">
+                <label for="PrimeiroNum-c5">Número 1:</label>
+                <input type="text" id="PrimeiroNum-c5" placeholder="Insira um número...">
+            </div>
+            <div class="input-group">
+                <label for="SegundoNum-c5">Número 2:</label>
+                <input type="text" id="SegundoNum-c5" placeholder="Insira um número...">
+            </div>
+            <p id="resultado"></p>
+            <button class="btn" onclick="trueOrFalse()">COMPARAR</button>
         </div>
-        <div class="input-group">
-            <label for="SegundoNum-c5">Número 2:</label>
-            <input type="text" id="SegundoNum-c5" placeholder="Insira um número...">
+
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
         </div>
-        <p id="resultado-c5"></p>
-        <button class="btn" onclick="trueOrFalse()">COMPARAR</button>
-    </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
+                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
+                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    
 
 <!-- JS -->
 <script type="text/javascript" src="./js/funcoes.js"></script>

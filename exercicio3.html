@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 01</title>
+    <title>Exercício 03</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
@@ -14,25 +14,43 @@
 
 </head>
 <body>
-    <!-- HTML -->
-    <div id="challenge-box-3" class="challenge-box">
-        <h1>Desafio 03</h1>
-        <p>Crie uma função que receba:<br>
-        - Quantidade de horas trabalhadas;<br>
-        - Valor recebido por hora;<br>
-        O retono deve ser uma string: "Salário igual a R$ <b>valor</b>"                    
-        </p>
-        <div class="input-group">
-            <label for="qtdHoras-c3">Qtd. Horas:</label>
-            <input type="text" id="qtdHoras-c3" placeholder="Insira qtd de horas...">
+    <section id="box-3">
+        <div id="challenge-box-3" class="challenge-box">
+            <h1>Exercício 03</h1>
+            <p>Crie uma função que receba:<br>
+            - Quantidade de horas trabalhadas;<br>
+            - Valor recebido por hora;<br>
+            O retono deve ser uma string: "Salário igual a R$ <b>valor</b>"                    
+            </p>
+            <div class="input-group">
+                <label for="qtdHoras-c3">Qtd. Horas:</label>
+                <input type="text" id="qtdHoras-c3" placeholder="Insira qtd de horas...">
+            </div>
+            <div class="input-group">
+                <label for="vlrHoras-c3">Valor/horas:</label>
+                <input type="text" id="vlrHoras-c3" placeholder="Insira valor/hora...">
+            </div>
+            <p id="resultado"></p>
+            <button class="btn" onclick="calcularSalario()">CALCULAR</button>
         </div>
-        <div class="input-group">
-            <label for="vlrHoras-c3">Valor/horas:</label>
-            <input type="text" id="vlrHoras-c3" placeholder="Insira valor/hora...">
+
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
         </div>
-        <p id="resultado-c3"></p>
-        <button class="btn" onclick="calcularSalario()">CALCULAR</button>
-    </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
+                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
+                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    
 
 <!-- JS -->
 <script type="text/javascript" src="./js/funcoes.js"></script>
