@@ -20,8 +20,8 @@
             <p>Crie uma função que receba:<br>
             - Dois números;<br>
             O retono deve ser <b>true</b> se o primeiro for <b>>=</b> ao segundo.<br>
-            O retorno deve ser <b>false</b> se caso não satisfaça a primeira condição<br>
-            e caso os valores sejam de tipos diferente.                    
+            O retorno deve ser <b>false</b> caso não satisfaça a primeira condição<br>
+            e caso os valores sejam de tipos diferentes(Number/String).                    
             </p>
             <div class="input-group">
                 <label for="PrimeiroNum-c5">Número 1:</label>
@@ -43,9 +43,15 @@
             <h3>JavaScript:</h3>
             <pre>
                 <code>
-                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
-                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
-                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    function trueOrFalse() {
+                        const num1 = parseInt(document.getElementById('PrimeiroNum-c5').value);
+                        const num2 = parseInt(document.getElementById('SegundoNum-c5').value);
+                    
+                        if(typeof num1 !== typeof num2) {
+                            document.getElementById('resultado').innerHTML = false;
+                        } else {
+                            document.getElementById('resultado').innerHTML = `${num1 >= num2}`;
+                        }
                     }
                 </code>
             </pre>

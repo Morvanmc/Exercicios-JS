@@ -42,9 +42,10 @@
             <h3>JavaScript:</h3>
             <pre>
                 <code>
-                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
-                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
-                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    <span class="function">function </span><span class="function-name">calcularSalario</span>() {
+                        <span class="function">const</span> <span class="var"> qtdHoras</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'qtdHoras-c3'</span>).value;
+                        <span class="function">const</span> <span class="var"> vlrHoras</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'vlrHoras-c3'</span>).value;
+                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado'</span>).innerHTML = <span class="att-value">`Salário igual a R$ </span><span class="function">${</span><span class="var">qtdHoras</span><span class="function"> * </span><span class="var">vlrHoras</span><span class="function">}</span><span class="att-value">`</span>;
                     }
                 </code>
             </pre>

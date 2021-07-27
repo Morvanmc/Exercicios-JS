@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-10">
+        <div id="challenge-box-10" class="challenge-box">
+            <h1>Exercício 10</h1>
+            <p>Crie uma função que receba 1 número:<br>
+                - O número será a quantidade de vezes que o "<strong>+</strong>" será repetido.<br>
+                - O resultado deve ser sem separação(Ex.: "+++++").
+            </p>
+            <div class="input-group">
+                <label for="num-c10">Repetir:</label>
+                <input type="text" id="num-c10" placeholder="Insira um número...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="repetirPlus()">REPETIR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function repetirPlus() {
+                        const num = parseInt(document.getElementById('num-c10').value);
+                        result = ''
+                        for(let i = 0; i &lsaquo; num; i++) {
+                            result += '+'
+                        }
+                        document.getElementById('resultado').innerHTML = `${result}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

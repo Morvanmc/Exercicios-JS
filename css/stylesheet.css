@@ -54,6 +54,7 @@
     justify-content: center;
 
     background-color: #DCDCDC;
+    overflow: auto;
 }
 
 .exercicios-nav a {
@@ -166,6 +167,9 @@
 
     align-items: center;
     justify-content: center;
+
+    line-height: 1.5;
+    overflow: auto;
   }
 
   .button-box {
@@ -198,7 +202,7 @@
       --function-color: #DA70D6;
       --function-name-color: #32CD32;
       --att-value-color: #FFFF00cc;
-      --var-color: #9932CC;
+      --var-color: rgba(43, 142, 199, 0.8);
   }
 
   .function {

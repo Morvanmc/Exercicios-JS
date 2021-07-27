@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-7">
+        <div id="challenge-box-7" class="challenge-box">
+            <h1>Exercício 07</h1>
+            <p>Crie uma função que receba 3 números e 1 boolean:<br>
+                - Número, Mínimo, Máximo e Inclusivo.<br>
+                - Inclusivo deverá ter valor <strong>false</strong> como padrão.<br>
+                - Quando for passado <strong>true</strong> para Inclusivo, considere se o Número é igual a min ou a max.<br>
+                - Retorne true se o <strong>número</strong> estiver entre min - max.<br>
+                - E false caso não esteja.
+            </p>
+            <div class="input-group">
+                <label for="num-c7">Número:</label>
+                <input type="text" id="num-c7" placeholder="Insira um número...">
+            </div>
+            <div class="input-group">
+                <label for="min-c7">Mínimo:</label>
+                <input type="text" id="min-c7" placeholder="Insira o mínimo...">
+            </div>
+            <div class="input-group">
+                <label for="max-c7">Máximo:</label>
+                <input type="text" id="max-c7" placeholder="Insira o máximo...">
+            </div>
+            <div class="input-group">
+                <label for="inclusivo-c7">Inclusivo:</label>
+                <input type="text" value="false" id="inclusivo-c7" placeholder="false">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="estaEntre()">ESTÁ CONTIDO?</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function estaEntre() {
+                        const num = parseFloat(document.getElementById('num-c7').value);
+                        const min = parseFloat(document.getElementById('min-c7').value);
+                        const max = parseFloat(document.getElementById('max-c7').value);
+                        const inclusivo = document.getElementById('inclusivo-c7').value;
+                    
+                        inclusivo == 'false' ? document.getElementById('resultado').innerHTML = `${num > min && num < max}` : 
+                        document.getElementById('resultado').innerHTML = `${num >= min && num <= max}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

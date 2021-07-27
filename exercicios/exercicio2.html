@@ -18,7 +18,8 @@
         <div id="challenge-box-2" class="challenge-box">
             <h1>Exercício 02</h1>
             <p>Crie uma função que receba uma idade em anos<br>
-                e retorne a mesma idade em dias.
+                e retorne a mesma idade em dias.<br>
+                * Desconsiderar anos bissextos.
             </p>
             <div class="input-group">
                 <label for="age-c2">Idade:</label>
@@ -36,9 +37,9 @@
             <h3>JavaScript:</h3>
             <pre>
                 <code>
-                    <span class="function">function </span><span class="function-name">cumprimentar</span>() {
-                        <span class="function">const</span> <span class="var"> name</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'name-c1'</span>).value;
-                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado-c1'</span>).innerHTML = <span class="att-value">`Olá, </span><span class="function">${</span><span class="var">name</span><span class="function">}</span><span class="att-value">!`</span>;
+                    <span class="function">function </span><span class="function-name">anoEmDias</span>() {
+                        <span class="function">const</span> <span class="var"> age</span> = <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'age-c2'</span>).value;
+                        <span class="function">document</span>.<span class="function-name">getElementById</span>(<span class="att-value">'resultado'</span>).innerHTML = <span class="att-value">`Idade em dias = </span><span class="function">${</span><span class="var">age</span><span class="function"> * </span><span class="var">365</span><span class="function">}</span><span class="att-value">`</span>;
                     }
                 </code>
             </pre>
