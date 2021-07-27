@@ -6,7 +6,8 @@ function navegarViaAjax(url, seletor, push = true) {
         .then(html => {
             elemento.innerHTML = html
             if(push) {
-                history.pushState({ seletor }, null, url)
+                const cleanUrl = url.split('/')[1]
+                history.pushState({ seletor }, null, cleanUrl)
             }
         })
 }
