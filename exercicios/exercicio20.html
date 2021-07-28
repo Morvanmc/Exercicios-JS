@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-20">
+        <div id="challenge-box-20" class="challenge-box">
+            <h1>Exercício 20</h1>
+            <p>Crie uma função que receba a base e altura de um triângulo:<br>
+                - Retorne a área do triângulo ((base x altura)/2).<br>
+                - O resultado deve ter a precisão de duas casas decimais.<br>
+            </p>
+            <div class="input-group">
+                <label for="base-c20">Base:</label>
+                <input type="text" id="base-c20" placeholder="Insira a base...">
+            </div>
+            <div class="input-group">
+                <label for="altura-c20">Altura:</label>
+                <input type="text" id="altura-c20" placeholder="Insira a altura...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="calcularArea()">CALCULAR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function calcularArea() {
+                        const b = parseFloat(document.getElementById('base-c20').value);
+                        const h = parseFloat(document.getElementById('altura-c20').value);
+                    
+                        const area = (b * h) / 2;
+                    
+                        document.getElementById('resultado').innerHTML = `Área = ${area.toFixed(2)}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

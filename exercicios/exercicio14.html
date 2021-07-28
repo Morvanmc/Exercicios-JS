@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-14">
+        <div id="challenge-box-14" class="challenge-box">
+            <h1>Exercício 14</h1>
+            <p>Crie uma função que receba 1 Objeto:<br>
+                - O retorno deve ser um array de arrays onde chave/valor sejam os elementos do array<br>
+                - Ex.: {"nome": "Maria", "idade": 28} => [["nome", "Maria"], ["idade", 28]]<br>
+            </p>
+            <div class="input-group">
+                <label for="obj-c14">Objeto:</label>
+                <input type="text" id="obj-c14" placeholder="Insira um objeto...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="objToArray()">ARRAYZAR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function objToArray() {
+                        const obj = JSON.parse(document.getElementById('obj-c14').value);
+                        let result = []
+                        for(let key in obj ) {
+                            result.push([key, obj[key]])
+                        }
+                        result = JSON.stringify(result)
+                    
+                        document.getElementById('resultado').innerHTML = `${result}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

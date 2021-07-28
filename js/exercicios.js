@@ -135,6 +135,7 @@ function multiplicar() {
 }
 
 /* Exercício 09 */
+
 function repetir() {
     const param = document.getElementById('param-c9').value;
     const num = parseInt(document.getElementById('num-c9').value);
@@ -146,6 +147,7 @@ function repetir() {
 }
 
 /* Exercício 10 */
+
 function repetirPlus() {
     const num = parseInt(document.getElementById('num-c10').value);
     result = ''
@@ -153,4 +155,144 @@ function repetirPlus() {
         result += '+'
     }
     document.getElementById('resultado').innerHTML = `${result}`
+}
+
+/* Exercício 11 */
+
+function firstAndLast() {
+    let array = document.getElementById('array-c11').value;
+    result = array.split(',')
+    document.getElementById('resultado').innerHTML = 
+    `Primeiro valor: ${result.shift()} Último valor: ${result.pop()}`
+}
+
+/* Exercício 12 */
+
+function removeProperty() {
+    const obj = document.getElementById('obj-c12').value;
+    let prop = document.getElementById('prt-c12').value;
+    prop = prop.replace(/"/g,""); //regex para retirar aspas ""
+
+    const objeto = JSON.parse(obj);
+    let objCopia = Object.assign({}, objeto);
+    delete objCopia[prop]
+
+    objCopia = JSON.stringify(objCopia)
+
+    document.getElementById('resultado').innerHTML = `Objeto: ${objCopia} : ${Object.is(objCopia)}`
+}
+
+/* Exercício 13 */
+
+function filtrarNum() {
+    let array = document.getElementById('array-c13').value;
+    result = array.split(',')
+    finalResult = []
+
+    for(let i = 0; i < result.length; i++) {
+        if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+            finalResult.push(result[i]);
+        }
+    }
+
+    document.getElementById('resultado').innerHTML = `Number no array: ${finalResult}`
+}
+
+/* Exercício 14 */
+
+function objToArray() {
+    const obj = JSON.parse(document.getElementById('obj-c14').value);
+    let result = []
+    for(let key in obj ) {
+        result.push([key, obj[key]])
+    }
+    result = JSON.stringify(result)
+
+    document.getElementById('resultado').innerHTML = `${result}`
+}
+
+/* Exercício 15 */
+
+function parIndicePar() {
+    let array = document.getElementById('array-c15').value;
+    result = array.split(',')
+    finalResult = []
+
+    for(let i = 0; i < result.length; i++) {
+        if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+           if(i != 0 && i % 2 == 0 && result[i] % 2 == 0) {
+            finalResult.push(result[i]);
+           }
+        }
+    }
+
+    document.getElementById('resultado').innerHTML = `Números pares de índice par: ${finalResult}`
+}
+
+/* Exercício 16 */
+
+function bissexto() {
+    const ano = parseInt(document.getElementById('ano-c16').value);
+
+    (ano % 4 == 0) && (ano % 100 != 0) || (ano % 400 == 0) ? 
+    document.getElementById('resultado').innerHTML = true : 
+    document.getElementById('resultado').innerHTML = false;
+}
+
+/* Exercício 17 */
+
+function somarArray() {
+    let array = document.getElementById('array-c17').value;
+    result = array.split(',')
+    finalResult = 0
+
+    for(let i = 0; i < result.length; i++) {
+        if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+            finalResult += parseFloat(result[i]);
+        }
+    }
+
+    document.getElementById('resultado').innerHTML = `Total: ${finalResult}`
+}
+
+/* Exercício 18 */
+
+function somarTotalProd() {
+    const obj = JSON.parse(document.getElementById('array-c18').value);
+    let soma = 0;
+
+    for(let p of obj) {
+        soma += p.preco;
+    }
+
+    document.getElementById('resultado').innerHTML = `${soma}`
+}
+
+/* Exercício 19 */
+
+function calcularMediaSimples() {
+    let array = document.getElementById('array-c19').value;
+    result = array.split(',')
+    let soma = 0;
+
+    for(let i = 0; i < result.length; i++) {
+        if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+           soma += parseFloat(result[i]);
+        }
+    }
+
+    let media = soma/result.length;
+
+    document.getElementById('resultado').innerHTML = `Média simples: ${media}`
+}
+
+/* Exercício 20 */
+
+function calcularArea() {
+    const b = parseFloat(document.getElementById('base-c20').value);
+    const h = parseFloat(document.getElementById('altura-c20').value);
+
+    const area = (b * h) / 2;
+
+    document.getElementById('resultado').innerHTML = `Área = ${area.toFixed(2)}`
 }

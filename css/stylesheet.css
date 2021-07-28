@@ -170,6 +170,7 @@
 
     line-height: 1.5;
     overflow: auto;
+    letter-spacing: 1px;
   }
 
   .button-box {

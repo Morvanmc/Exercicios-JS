@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-12">
+        <div id="challenge-box-12" class="challenge-box">
+            <h1>Exercício 12</h1>
+            <p>Crie uma função que receba 2 valores:<br>
+                - O primeiro deve ser um ojeto com propriedade e valores (EX.: {"a": 1, "b": "Olá"})<br>
+                - O segundo deve ser o nome de prorpiedade do objeto passado (EX.: "a")<br>
+                - Retorne um novo objeto sem a propriedade passada.<br>
+                - Para testar se o objeto não é o mesmo utilize a função Object.is()<br>
+                - O retorno <strong>false</strong> indica que não é o mesmo objeto.<br>
+            </p>
+            <div class="input-group">
+                <label for="obj-c12">Objeto:</label>
+                <input type="text" id="obj-c12" placeholder="Insira um objeto...">
+            </div>
+            <div class="input-group">
+                <label for="prt-c12">Propriedade:</label>
+                <input type="text" id="prt-c12" placeholder="Insira uma propriedade...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="removeProperty()">REMOVER</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function removeProperty() {
+                        const obj = document.getElementById('obj-c12').value;
+                        let prop = document.getElementById('prt-c12').value;
+                        prop = prop.replace(/"/g,""); //regex para retirar aspas ""
+                    
+                        const objeto = JSON.parse(obj);
+                        let objCopia = Object.assign({}, objeto);
+                        delete objCopia[prop]
+                    
+                        objCopia = JSON.stringify(objCopia)
+                    
+                        document.getElementById('resultado').innerHTML = `Objeto: ${objCopia} : ${Object.is(objCopia)}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>
