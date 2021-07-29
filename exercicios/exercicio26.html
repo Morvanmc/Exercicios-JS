@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 26</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-26">
+        <div id="challenge-box-26" class="challenge-box">
+            <h1>Exercício 26</h1>
+            <p>Crie uma função que receba uma palavra:<br>
+                - O retorno deve ser a palavra sem as <strong>vogais</strong>.<br>
+                -Ex.: Fundamentos // retornará Fndmnts.
+            </p>
+            <div class="input-group">
+                <label for="plvr-c26">Palavra:</label>
+                <input type="text" id="plvr-c26" placeholder="Insira uma palavra...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="removerVogais()">SÓ CONSOANTE</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function removerVogais() {
+                        let plvr = document.getElementById('plvr-c26').value;
+                        plvr = plvr.replace(/"/g,""); //regex para retirar aspas ""
+                    
+                        palavra = plvr.replace(/[aeiou]/ig, '') //regex para ignorar aeiou
+                    
+                        document.getElementById('resultado').innerHTML = `${palavra}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

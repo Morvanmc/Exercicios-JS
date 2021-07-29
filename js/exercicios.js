@@ -296,3 +296,190 @@ function calcularArea() {
 
     document.getElementById('resultado').innerHTML = `Área = ${area.toFixed(2)}`
 }
+
+/* Exercício 21 */
+
+function menorNum() {
+    let array = document.getElementById('array-c21').value;
+    result = array.split(',')
+    finalResult = []
+
+    for(let i = 0; i < result.length; i++) {
+        if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+            finalResult.push(parseFloat(result[i]));
+        }
+    }
+
+    const menor = Math.min(...finalResult);
+
+    //Outra solução
+    
+    /*Array.min = function(array) {
+        return Math.min.apply(Math, array);
+    }
+
+    const menor = Array.min(finalResult);*/
+
+    document.getElementById('resultado').innerHTML = `Menor número do Array é: ${menor}`
+}
+
+/* Exercício 22 */
+
+function fourLeafClover() {
+    const num = parseInt(document.getElementById('num-c22').value);
+    const min = 1
+    const max = 10
+    const numSorteado = Math.floor(Math.random() * (max - min + 1) + min)
+
+    num == numSorteado ? document.getElementById('resultado').innerHTML = `Parabéns! O número ${numSorteado} foi o sorteado!` : 
+    document.getElementById('resultado').innerHTML = `Que pena! O número ${numSorteado} foi o sorteado!`
+}
+
+/* Exercício 23 */
+
+function contarPalavras() {
+    const str = document.getElementById('str-c23').value;
+    const total = str.split(' ').length
+
+    document.getElementById('resultado').innerHTML = `Total de palavras = ${total}`
+}
+
+/* Exercício 24 */
+
+function contarCaracter() {
+    let crt = document.getElementById('crt-c24').value;
+    crt = crt.replace(/"/g,""); //regex para retirar aspas ""
+    const str = document.getElementById('str-c24').value.split('');
+    
+    let cont = 0
+
+    for(let i in str) {
+        crt === str[i] ? cont++ : cont
+    }
+
+    document.getElementById('resultado').innerHTML = `Total de vezes que o caracter aparece é = ${cont}`
+}
+
+/* Exercício 25 */
+
+function buscaPalavra() {
+    let plvr = document.getElementById('plvr-c25').value;
+    plvr = plvr.replace(/"/g,""); //regex para retirar aspas ""
+    let array = JSON.parse(document.getElementById('array-c25').value);
+    resultado = []
+
+    for(let palavra of array) {
+        if(palavra.includes(plvr)) {
+            resultado.push(palavra)
+        }
+    }
+    resultado = JSON.stringify(resultado)
+
+    document.getElementById('resultado').innerHTML = `${resultado}`
+}
+
+/* Exercício 26 */
+
+function removerVogais() {
+    let plvr = document.getElementById('plvr-c26').value;
+    plvr = plvr.replace(/"/g,""); //regex para retirar aspas ""
+
+    palavra = plvr.replace(/[aeiou]/ig, '') //regex para ignorar aeiou
+
+    document.getElementById('resultado').innerHTML = `${palavra}`
+}
+
+/* Exercício 27 */
+
+function inverterObj() {
+    const obj = JSON.parse(document.getElementById('obj-c27').value);
+    let result = []
+    for(let key in obj ) {
+        result.push(obj[key], key)
+    }
+
+    result = JSON.stringify(result)
+
+    document.getElementById('resultado').innerHTML = `${result}`
+}
+
+/* Exercício 28 */
+
+function filtrarNumPorDigito() {
+    const array = document.getElementById('array-c28').value;
+    separaNum = array.split(',')
+    const dgt = document.getElementById('dgt-c28').value;
+
+    result = []
+    for(let i = 0; i < separaNum.length; i++) {
+        if(typeof parseFloat(separaNum[i]) == 'number' && !isNaN(separaNum[i])) {
+            result.push(parseFloat(separaNum[i]));
+        }
+    }
+
+    resultado = []
+    for(numero of result){
+        qtdDigitos = String(numero).length;
+        if(qtdDigitos == dgt) {
+            resultado.push(numero)
+        }
+        
+    }
+    
+    document.getElementById('resultado').innerHTML = `${resultado}`
+}
+
+/* Exercício 29 */
+
+function segundoMaior() {
+    const array = document.getElementById('array-c29').value;
+    separaNum = array.split(',')
+
+    result = []
+    for(let i = 0; i < separaNum.length; i++) {
+        if(typeof parseFloat(separaNum[i]) == 'number' && !isNaN(separaNum[i])) {
+            result.push(parseFloat(separaNum[i]));
+        }
+    }
+
+    segMaior = result.sort((a, b) => a > b ? 1 : -1)[1]
+
+    document.getElementById('resultado').innerHTML = `${segMaior}`
+}
+
+/* Exercício 30 */
+
+function maiorMedia() {
+    let obj = JSON.parse(document.getElementById('obj-c30').value);
+
+    const soma = array => array.reduce((acumulador, atual) => acumulador + atual, 0);
+    const media = array => soma(array) / array.length;
+
+    function melhor(estudantes) {
+        const estudantesComMedias = Object.entries(estudantes).map( estudante => {
+            const chave = 0,
+                  valor = 1
+
+            return { nome: estudante[chave], media: media(estudante[valor])}
+        })
+        const estudantesOrdenados = estudantesComMedias.sort((estudanteA, estudanteB) => estudanteB.media - estudanteA.media)
+        const melhorEstudante = estudantesOrdenados[0]
+
+        return melhorEstudante
+    }
+    
+    resultado = JSON.stringify(melhor(obj))
+
+    document.getElementById('resultado').innerHTML = `${resultado}`
+}
+
+/* Desafio Bônus */
+
+function palindromo() {
+    const palavra = document.getElementById('palin-cb').value;
+
+    let plvr = palavra.split('').reverse().join('')
+
+    palavra == plvr ? document.getElementById('resultado').innerHTML = 'É Palíndromo' : 
+                      document.getElementById('resultado').innerHTML = 'Não é Palíndromo'
+}

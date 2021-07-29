@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 24</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-24">
+        <div id="challenge-box-24" class="challenge-box">
+            <h1>Exercício 24</h1>
+            <p>Crie uma função que receba 2 parâmetros:<br>
+                - O primeiro será um caracter.<br>
+                - O segundo será uma string.<br>
+                - O retorno deverá ser a quantidade de vezes que o caracter aparece na string.<br>
+                - A função deverá ser <i>case-sensitive</i>(diferenciar maiúsculas de minúsculas).<br>
+                -Ex.: "a", "A sorte favorece os audazes" // retornará 3.
+            </p>
+            <div class="input-group">
+                <label for="crt-c24">Caracter:</label>
+                <input type="text" id="crt-c24" placeholder="Insira um caracter...">
+            </div>
+            <div class="input-group">
+                <label for="str-c24">String:</label>
+                <input type="text" id="str-c24" placeholder="Insira uma string...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="contarCaracter()">CONTAR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function contarCaracter() {
+                        let crt = document.getElementById('crt-c24').value;
+                        crt = crt.replace(/"/g,""); //regex para retirar aspas ""
+                        const str = document.getElementById('str-c24').value.split('');
+                        
+                        let cont = 0
+                    
+                        for(let i in str) {
+                            crt === str[i] ? cont++ : cont
+                        }
+                    
+                        document.getElementById('resultado').innerHTML = `Total de vezes que o caracter aparece é = ${cont}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

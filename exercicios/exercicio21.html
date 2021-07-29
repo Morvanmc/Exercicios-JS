@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-21">
+        <div id="challenge-box-21" class="challenge-box">
+            <h1>Exercício 21</h1>
+            <p>Crie uma função que receba um array:<br>
+                - Os valores devem ser separados por "<strong>,</strong>" .<br>
+                - Deve ser um array apenas de <strong>números</strong>.<br>
+                - Retorne o menor número do array.<br>
+            </p>
+            <div class="input-group">
+                <label for="array-c21">Valores:</label>
+                <textarea id="array-c21" name="array-c21" rows="4" cols="50"></textarea>
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="menorNum()">MENOR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function menorNum() {
+                        let array = document.getElementById('array-c21').value;
+                        result = array.split(',')
+                        finalResult = []
+                    
+                        for(let i = 0; i &lsaquo; result.length; i++) {
+                            if(typeof parseFloat(result[i]) == 'number' && !isNaN(result[i])) {
+                                finalResult.push(parseFloat(result[i]));
+                            }
+                        }
+                    
+                        const menor = Math.min(...finalResult);
+                    
+                        //Outra solução
+                        
+                        /* Array.min = function(array) {
+                            return Math.min.apply(Math, array);
+                        }
+                    
+                        const menor = Array.min(finalResult); */
+                    
+                        document.getElementById('resultado').innerHTML = `Menor número do Array é: ${menor}`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

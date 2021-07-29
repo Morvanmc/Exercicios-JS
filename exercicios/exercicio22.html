@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-22">
+        <div id="challenge-box-22" class="challenge-box">
+            <h1>Exercício 22</h1>
+            <p>Crie uma função que receba um número:<br>
+                - O número deve ser de 1 a 10.<br>
+                - Internamente na função sorteie um número aleatório de 1 a 10.<br>
+                - Se o número de entrada for igual ao sorteado dê os parabéns.<br>
+                -Caso não sejam iguais, tente outra vez.
+            </p>
+            <div class="input-group">
+                <label for="num-c22">Número:</label>
+                <input type="text" id="num-c22" placeholder="Insira um número...">
+            </div>
+
+            <p id="resultado"></p>
+            <button class="btn" onclick="fourLeafClover()">SORTEAR</button>
+        </div>
+        
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+    
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function fourLeafClover() {
+                        const num = parseInt(document.getElementById('num-c22').value);
+                        const min = 1
+                        const max = 10
+                        const numSorteado = Math.floor(Math.random() * (max - min + 1) + min)
+                    
+                        num == numSorteado ? document.getElementById('resultado').innerHTML = `Parabéns! O número ${numSorteado} foi o sorteado!` : 
+                        document.getElementById('resultado').innerHTML = `Que pena! O número ${numSorteado} foi o sorteado!`
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>

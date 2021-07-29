@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Bônus</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+</head>
+<body>
+    <section id="box-bonus">
+        <div class="challenge-box">
+            <h1>Desafio Bônus</h1>
+            <p>Crie uma função que receba uma palavra e diga se ela é um palíndromo:<br>
+                - Que se pode ler a mesma palavra em qualquer direção.<br>
+                - Ex.: "ANA", "ARARA", "REVIVER".
+            </p>
+            <div class="input-group">
+                <label for="palin-cb">Palavra:</label>
+                <input type="text" id="palin-cb" name="palin-cb" placeholder="Insira uma palavra...">
+            </div>
+            <p id="resultado"></p>
+            <button class="btn" onclick="palindromo()">É PALÍNDROMO?</button>
+        </div>
+
+        <div class="button-box">
+            <button class="btn-box" onclick="hiddenCode()"><ion-icon name="code-slash-outline"></ion-icon></button>
+        </div>
+
+        <div class="code-box hidden">
+            <h3>JavaScript:</h3>
+            <pre>
+                <code>
+                    function palindromo() {
+                        const palavra = document.getElementById('palin-cb').value;
+                    
+                        let plvr = palavra.split('').reverse().join('')
+                    
+                        palavra == plvr ? document.getElementById('resultado').innerHTML = 'É Palíndromo' : 
+                                          document.getElementById('resultado').innerHTML = 'Não é Palíndromo'
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    
+
+<!-- JS -->
+<script type="text/javascript" src="./js/funcoes.js"></script>
+</body>
+</html>
